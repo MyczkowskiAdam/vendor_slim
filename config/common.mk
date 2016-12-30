@@ -73,6 +73,11 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam
 
+# Include explicitly to work around GMS issues
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full \
+    librsjni
+
 # AudioFX
 PRODUCT_PACKAGES += \
     AudioFX
@@ -147,7 +152,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 # Slim version.
 PRODUCT_VERSION_MAJOR = 7.1.1
 PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 0.4
+PRODUCT_VERSION_MAINTENANCE = 0.5
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
